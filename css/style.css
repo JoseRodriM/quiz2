@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700;900&display=swap');
+/*font-family: 'Poppins', sans-serif;*/
+
+html,
+body {
+    width: 100%;
+    background-image: url(/media/bg.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position-x: center;
+    margin: 0;
+    position: fixed;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+}
+
+
+.menu{
+    flex-direction: row;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.menu>a{
+    text-decoration: none;
+    margin: 10px;
+}
+.menu-text{
+    list-style: none;
+    color: #ba63ba;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+
+/* _______INDEX_______ */
+
+/*LOGO*/
+.logo-div {
+    display: flex;
+    justify-content: center;
+}
+
+
+#logo {
+    margin-top: 3px;
+    width: 100vw;
+    max-width: 65vh;
+}
+
+
+
+/*(temporal hasta que tengamos gráfica)*/
+#chart-img {
+    width: 35vw;
+    max-width: 150px;
+}
+
+.chart-div {
+    display: flex;
+    justify-content: center;
+}
+
+#chart-div-2 {
+    background-color: rgb(237, 237, 237, .5);
+    display: flex;
+    justify-content: center;
+    /* margin-top: 2vh; */
+    /* border: 2px solid white; */
+    padding: 3%;
+    width: 80%;
+    border-radius: 13px;
+    max-width: 80%;
+}
+
+
+/*boton START*/
+.start-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.start-div:hover, #google:hover, #out:hover {
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+#start-p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    padding: 0px 25px 0px 25px;
+}
+
+#start-btn {
+    background-color: yellow;
+    width: 200px;
+}
+
+
+.sign, .out{
+    text-align: center;
+}
+
+/*MEDIA QUERY*/
+@media only screen and (min-width: 768px) {}
+
+/*______QUESTIONS________*/
+
+/*boton atras*/
+.atras-img {
+    transition: all .2s ease-in-out;
+    width: 50px;
+    margin-left: 5px;
+}
+
+.atras:hover {
+    transform: scale(1.1);
+}
+
+.atras-div {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+
+/*_____RESULTS_____*/
+
+.title-style {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    text-decoration: underline 1.5px;
+    text-underline-offset: 3px;
+}
+
+#body-results{
+    display: flex;
+    flex-direction: column;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+.show{
+    z-index: -100;
+}
+
+.hidden{
+    display: none;
+}
+
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(8, 114, 224, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.choice-container{
+    display: flex;
+    margin-bottom: 0.8rem;
+    border-radius: 4px;
+    background: rgb(45, 80, 155);
+    font-size: 3rem;
+}
+
+.choice-container:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6,103,247,0.5);
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.choice-prefix{
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text{
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct{
+    background: linear-gradient(32deg, rgba(11,223,36)0%,rgb(41,232,111)100%);
+}
+.incorrect{
+    background: linear-gradient(32deg, rgba(230,29,29,1)0%,rgb(224,11,11,1)100%);
+}
+
+#hud{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hud-prefix{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+#progressBar{
+    width: 20rem;
+    height: 2rem;
+    border: 0.2rem solid rgb(11, 223, 36);
+    margin-top: 2rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull{
+    height: 100%;
+    background: rgb(11, 223, 36);
+}
+
+
+@media (max-width: 768px){
+
+    .container{
+        margin: 0 auto;
+    }
+
+    #hud{
+        display: flex;
+        flex-direction: column;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+
+    #question{
+        margin-bottom: 1.5rem;
+    }
+
+    .choice-container{
+        width: 15rem;
+        height: 10rem;
+    }
+    .questions-container{
+        width: 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .choice-text{
+       padding: 1.5rem 1.5rem ; 
+       text-align: center;
+    }
+
+    .choice-prefix{
+        padding: 1.5rem 1rem;
+    }
+
+    #progressBar{
+        margin: 0 auto;
+    }
+    .hud-main-text{
+        text-align: center;
+    }
+}
+
+@media (max-width:480px){
+    .questions-container{
+        display: flex;
+        flex-direction: column;
+        height: 5rem;
+    }
+    .choice-text{
+        text-align: center;
+        padding: 0 0;
+     }
+ 
+    .choice-prefix{
+        padding:0 0 ;
+    }
+
+    #progressBar{
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    body{
+        height: auto;
+    }
+
+} 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="logo-div">
+        <img src="/media/logo.svg" alt="logo" id="logo">
+    </div>
+
+    <nav>
+        <ul class="menu">
+            <a href="/pages/scores.html"><li class="menu-text">SCORES</li></a>
+        </ul>
+    </nav>
+
+    <div class="chart-div">
+        <div id="chart-div-2">
+        <img src="/media/chart_to-be-substituted.png" alt="chart"
+         id="chart-img">
+        </div>
+    </div>
+
+    <div class="sign">
+        <button id="google">Sign in with Google for play<i class='bx bxl-google'></i></button>
+    </div>
+
+    <div class="out hidden">
+        <button id="out">Log out</button>
+    </div>
+
+    <div class="start-div hidden">
+        <a href="/pages/question.html">
+        <button id="start-btn">
+            <p id="start-p">START</p>
+        </button>
+        </a>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-auth.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
